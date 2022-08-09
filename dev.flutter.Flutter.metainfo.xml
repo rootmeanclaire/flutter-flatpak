@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="runtime">
+  <id>dev.flutter.Flutter</id>
+  <name>Reaper</name>
+  <summary>Digital Audio Workstation.</summary>
+  <url type="homepage">https://flutter.dev/</url>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>BSD-3-Clause</project_license>
+  <description>
+    <p>Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.</p>
+  </description>
+  <releases>
+    <release version="v3.0.5" date="2022-07-13">
+    </release>
+  </releases>
+  <developer_name>
+    Google
+  </developer_name>
+</component>
