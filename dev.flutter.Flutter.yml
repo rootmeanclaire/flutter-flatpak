@@ -6,7 +6,8 @@ command: flutter
 
 finish-args:
   - --device=all
-  - --filesystem=home
+  # Update path
+  - --env=PATH=$PATH:/var/run/host/usr/bin/git
 
 modules:
   - name: flutter
