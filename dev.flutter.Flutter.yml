@@ -1,13 +1,11 @@
 app-id: dev.flutter.Flutter
-runtime: org.freedesktop.Platform
+runtime: org.freedesktop.Sdk
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 command: flutter
 
 finish-args:
   - --device=all
-  # Update path
-  - --env=PATH=$PATH:/app/bin/
 
 modules:
   - name: flutter
