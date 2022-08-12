@@ -11,15 +11,13 @@ modules:
   - name: flutter
     buildsystem: simple
     build-commands:
-      # Copy extracted tarball to default installation location
+      # Copy source to default installation location
       - cp -r . /app
       # Copy metadata
       - install -Dm644 $FLATPAK_ID.metainfo.xml /app/share/metainfo/$FLATPAK_ID.metainfo.xml
     sources:
-      - type: archive
-        url: https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.0.5-stable.tar.xz
-        sha256: 691a125ce790faf8a34536b9bd298c31adbf2d2568fc9384e2d43a69c5c1d6cc
-        only-arches:
-          - x86_64
+      - type: git
+        url: https://github.com/flutter/flutter.git
+        branch: stable
       - type: file
         path: dev.flutter.Flutter.metainfo.xml
