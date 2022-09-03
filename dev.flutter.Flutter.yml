@@ -16,8 +16,17 @@ modules:
       # Copy metadata
       - install -Dm644 $FLATPAK_ID.metainfo.xml /app/share/metainfo/$FLATPAK_ID.metainfo.xml
     sources:
+      # Upstream source
       - type: git
         url: https://github.com/flutter/flutter.git
-        branch: stable
+        tag: 3.0.4
+      # NixOS Patches (MIT Licensed)
+      # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/compilers/flutter/patches/move-cache.patch
+      - type: patch
+        path: move-cache.patch
+      # https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/compilers/flutter/patches/disable-auto-update.patch
+      - type: patch
+        path: disable-auto-update.patch
+      # Flatpak metadata
       - type: file
         path: dev.flutter.Flutter.metainfo.xml
